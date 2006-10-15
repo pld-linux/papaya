@@ -1,0 +1,21 @@
+--- papayacms-5.0.0/files/index.php~	2006-06-06 16:25:54.000000000 +0300
++++ papayacms-5.0.0/files/index.php	2006-10-16 01:07:20.646395509 +0300
+@@ -1,6 +1,6 @@
+ <?php
+ 
+-require_once("./conf.inc.php");
++require_once("/etc/webapps/papaya/config.php");
+ 
+ 
+ if (defined('PAPAYA_DBG_DEVMODE') && PAPAYA_DBG_DEVMODE) {
+--- papayacms-5.0.0/files/conf.inc.php~	2006-06-06 16:25:54.000000000 +0300
++++ papayacms-5.0.0/files/conf.inc.php	2006-10-16 01:08:04.637384828 +0300
+@@ -15,7 +15,7 @@
+ /**
+ * @const PAPAYA_INCLUDE_PATH library path
+ */
+-define('PAPAYA_INCLUDE_PATH', dirname(__FILE__).'papaya-lib/');
++define('PAPAYA_INCLUDE_PATH', '/usr/share/papaya/papaya-lib/');
+ 
+ /**
+ * @const PAPAYA_DB_TBL_OPTIONS Options table name
