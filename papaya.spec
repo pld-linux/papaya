@@ -1,6 +1,7 @@
 %define		_beta	beta2
 %define		_rel	0.5
 Summary:	High Performance Content Management
+Summary(pl):	System zarz±dzania tre¶ci± o du¿ej wydajno¶ci
 Name:		papaya
 Version:	5.0.0
 Release:	%{_beta}.%{_rel}
@@ -8,8 +9,8 @@ License:	GPL
 Group:		Applications/WWW
 Source0:	http://www.papaya-cms.com/%{name}_installation.download.0776990dd000f86376a804d7b5d6f5ba.zip
 # Source0-md5:	2dc8115b4a0befe2cb280967d11fe964
-URL:		http://www.papaya-cms.com/
 Patch0:		%{name}-webapps.patch
+URL:		http://www.papaya-cms.com/
 BuildRequires:	rpmbuild(macros) >= 1.268
 BuildRequires:	sed >= 4.0
 Requires:	apache(mod_rewrite)
@@ -29,6 +30,9 @@ Papaya CMS is Open Source Content Management System.
 papaya CMS ist ein Open Source Content Management System. Frei von
 Lizenzkosten und festen Bindungen mit Dienstleistern. Das System ist
 in jeder Hinsicht schnell, einfach und funktional.
+
+%description -l pl
+Papaya CMS to maj±cy otwarte ¼ród³a system zarz±dzania tre¶ci±.
 
 %prep
 %setup -qc
@@ -63,6 +67,9 @@ cp -a index.php favicon.ico $RPM_BUILD_ROOT%{_appdir}/htdocs
 cp -a papaya papaya-lib papaya-data papaya-script $RPM_BUILD_ROOT%{_appdir}
 cp -a papaya-themes $RPM_BUILD_ROOT%{_appdir}/htdocs
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %triggerin -- apache1 < 1.3.37-3, apache1-base >= 1.3.37-3
 %webapp_register apache %{_webapp}
 
@@ -74,9 +81,6 @@ cp -a papaya-themes $RPM_BUILD_ROOT%{_appdir}/htdocs
 
 %triggerun -- apache < 2.2.0, apache-base
 %webapp_unregister httpd %{_webapp}
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
