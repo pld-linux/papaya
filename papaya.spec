@@ -1,7 +1,7 @@
 %define		_beta	beta2
 %define		_rel	0.5
 Summary:	High Performance Content Management
-Summary(pl):	System zarz±dzania tre¶ci± o du¿ej wydajno¶ci
+Summary(pl.UTF-8):   System zarzÄ…dzania treÅ›ciÄ… o duÅ¼ej wydajnoÅ›ci
 Name:		papaya
 Version:	5.0.0
 Release:	%{_beta}.%{_rel}
@@ -26,13 +26,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Papaya CMS is Open Source Content Management System.
 
-%description -l de
+%description -l de.UTF-8
 papaya CMS ist ein Open Source Content Management System. Frei von
 Lizenzkosten und festen Bindungen mit Dienstleistern. Das System ist
 in jeder Hinsicht schnell, einfach und funktional.
 
-%description -l pl
-Papaya CMS to maj±cy otwarte ¼ród³a system zarz±dzania tre¶ci±.
+%description -l pl.UTF-8
+Papaya CMS to majÄ…cy otwarte ÅºrÃ³dÅ‚a system zarzÄ…dzania treÅ›ciÄ….
 
 %prep
 %setup -qc
