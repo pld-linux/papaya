@@ -1,7 +1,7 @@
 %define		_beta	beta2
 %define		_rel	0.5
 Summary:	High Performance Content Management
-Summary(pl.UTF-8):   System zarządzania treścią o dużej wydajności
+Summary(pl.UTF-8):	System zarządzania treścią o dużej wydajności
 Name:		papaya
 Version:	5.0.0
 Release:	%{_beta}.%{_rel}
