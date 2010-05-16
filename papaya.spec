@@ -13,6 +13,7 @@ Patch0:		%{name}-webapps.patch
 URL:		http://www.papaya-cms.com/
 BuildRequires:	rpmbuild(macros) >= 1.268
 BuildRequires:	sed >= 4.0
+BuildRequires:	unzip
 Requires:	apache(mod_rewrite)
 Requires:	webapps
 BuildArch:	noarch
